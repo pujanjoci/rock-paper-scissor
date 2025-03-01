@@ -3,6 +3,9 @@
 ## Overview
 This is a simple **Rock Paper Scissors** game built using **HTML, CSS, and JavaScript**. Players can choose between Rock, Paper, or Scissors and compete against a computer opponent. The game tracks the player's score, computer's score, and the number of ties.
 
+View the game here
+https://pujanjoci.github.io/rock-paper-scissor/
+
 ## Features
 - Interactive UI with animations.
 - Real-time score tracking for the player, computer, and ties.
@@ -23,7 +26,7 @@ This is a simple **Rock Paper Scissors** game built using **HTML, CSS, and JavaS
 ## Installation & Setup
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/rock-paper-scissors.git
+   git clone https://github.com/pujanjoci/rock-paper-scissor.git
    ```
 2. Open the `index.html` file in a web browser.
 

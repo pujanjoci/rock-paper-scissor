@@ -51,43 +51,43 @@ const updateScores = (result) => {
 };
 
 const playGame = (event) => {
-  const playerChoiceText = event.target.textContent.split(" ")[1];
-  const playerChoice = choices[playerChoiceText];
-  const computerChoice = getComputerChoice();
-
-  // Reset hands before animation
-  playerHand.textContent = "✊";
-  computerHand.textContent = "✊";
-
-  // Rocking animation
-  playerHand.style.animation = "rock 0.5s infinite";
-  computerHand.style.animation = "rock 0.5s infinite";
-
-  setTimeout(() => {
-    playerHand.style.animation = "";
-    computerHand.style.animation = "";
-
-    // Update hands
-    playerHand.textContent = playerChoice;
-    computerHand.textContent = computerChoice;
-
-    // Get result
-    const result = determineWinner(playerChoice, computerChoice);
-    resultText.textContent = result.message;
-    resultText.className = result.class;
-
-    // Update scores
-    updateScores(result);
-
-    // Show modal
-    modal.style.display = "flex";
-
-    // Automatically close the modal after 2.5 seconds
+    const playerChoiceText = event.target.textContent.split(" ")[1];
+    const playerChoice = choices[playerChoiceText];
+    const computerChoice = getComputerChoice();
+  
+    // Reset hands before animation
+    playerHand.textContent = "✊";
+    computerHand.textContent = "✊";
+  
+    // Rocking animation
+    playerHand.style.animation = "rock 0.5s infinite";
+    computerHand.style.animation = "rock 0.5s infinite";
+  
     setTimeout(() => {
-      modal.style.display = "none";
-    }, 1500); // 1.5 seconds
-  }, 1000);
-};
+      playerHand.style.animation = "";
+      computerHand.style.animation = "";
+  
+      // Update hands
+      playerHand.textContent = playerChoice;
+      computerHand.textContent = computerChoice;
+  
+      // Get result
+      const result = determineWinner(playerChoice, computerChoice);
+      resultText.textContent = result.message;
+      resultText.className = result.class;
+  
+      // Update scores
+      updateScores(result);
+  
+      // Show modal
+      modal.style.display = "flex";
+  
+      // Automatically close the modal after 2.5 seconds
+      setTimeout(() => {
+        modal.style.display = "none";
+      }, 1500); // 1.5 seconds
+    }, 1000);
+  };
 
 // Close modal on click
 closeModal.onclick = () => {
